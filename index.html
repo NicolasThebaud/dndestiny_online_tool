@@ -1,5 +1,75 @@
 <html>
-  <body>
-    <h1>test</h1>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <img id="bg" src="resources/bg.png" />
+        <table id="main" style="width: 90vw; height: 90vh;">
+            <td>
+                <h2 class="category c1">ARMES</h2>
+                <div id="weapons"></div>
+            </td>
+            <td>
+                <h2 class="category c2">MODULES [ARMES]</h2>
+                <div id="mods_w"></div>
+            </td>
+            <td>
+                <h2 class="category c3">MODULES [ARMURES]</h2>
+                <div id="mods_a"></div>
+            </td>
+            <td>
+                <h2 class="category c4">ARTEFACTS</h2>
+                <div id="artifacts"></div>
+            </td>
+        </table>
+
+        <div id="loot"><p>LOOT</p></div>
+        <div id="post-loot">
+            <h2 style="margin-top: 50px"></h2>
+            <img style="margin-top: 50px" id="engram" />
+            <h3 style="margin-top: 50px"></h3>
+            <h4 style="margin-top: 10px"></h4>
+        </div>
+        <div id="close-loot" style="opacity: 0"><p>FERMER</p></div>
+
+        <div id="details-weapons">
+            <h2 style="margin-top: 30px" class="details-name"></h2>
+            <h5 style="margin-top: 5px" class="details-type"></h5>
+            <table class="table-details" style="margin-top: 50px; width: 100%; text-align: center">
+                <tr>
+                    <td><p class="details-dmg"></p></td>
+                    <td><p class="details-ammo"></p></td>
+                </tr>
+                <tr>
+                    <td><p class="details-range"></p></td>
+                    <td><p class="details-properties"></p></td>
+                </tr>
+            </table>
+            
+            <div style="margin: 50px 25px" class="details-traits"></div>
+        </div>
+        <div id="details-mods_w">
+            <h2 style="margin-top: 30px" class="details-name"></h2>
+            <h5 style="margin-top: 5px" class="details-type"></h5>
+            <table class="table-details" style="margin-top: 50px; width: 100%; text-align: center">
+                <tr><p class="details-condition"></p></tr>
+            </table>
+            
+            <div style="margin: 50px 25px" class="details-traits"></div>
+        </div>
+        <div id="details-mods_a">
+            <h2 style="margin-top: 30px" class="details-name"></h2>
+            <h5 style="margin-top: 5px" class="details-type"></h5>
+            <div style="margin: 50px 25px" class="details-traits"></div>
+        </div>
+        <div id="details-artifacts"></div>
+
+        <div id="player">
+            <video id="video"><source id="mp4" type="video/mp4"/></video>
+        </div>
+    </body>
+
+    <script src="main.js"></script>
 </html>
