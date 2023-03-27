@@ -148,9 +148,9 @@
                 return; // no loot
             } else if (roll < 10) { // common
                 this.playLootVideo(0);
-            } else if (roll < 14) { // rare
+            } else if (roll < 16) { // rare
                 this.playLootVideo(1);
-            } else if (roll < 16) { // epic
+            } else if (roll < 19) { // epic
                 this.playLootVideo(2);
             } else { // legendary
                 this.playLootVideo(3);
