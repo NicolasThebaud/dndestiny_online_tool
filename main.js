@@ -143,10 +143,7 @@
             let roll = Math.floor(Math.random() * 20) + 1;
             
             this.lootReady = false;
-            if (roll < 5) { 
-                this.lootReady = true;
-                return; // no loot
-            } else if (roll < 10) { // common
+            if (roll < 10) { // common
                 this.playLootVideo(0);
             } else if (roll < 16) { // rare
                 this.playLootVideo(1);
