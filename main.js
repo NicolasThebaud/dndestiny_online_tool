@@ -84,8 +84,14 @@
 
             const globalLootPool = [this.weapons, this.weapon_mods, this.armor_mods];
             const lootPool = globalLootPool[Math.floor(Math.random() * globalLootPool.length)];
-            const filteredRarities = Object.entries(lootPool).filter(([id, item]) => +item.rarity === rarity);
-            const lootedItem = filteredRarities[Math.floor(Math.random() * filteredRarities.length)];
+            
+            let filteredRarities = Object.entries(lootPool).filter(([id, item]) => +item.rarity === rarity);
+            let lootedItem = filteredRarities[Math.floor(Math.random() * filteredRarities.length)];
+            
+            while (!lootedItem) {
+                filteredRarities = Object.entries(lootPool).filter(([id, item]) => +item.rarity === rarity);
+                lootedItem = filteredRarities[Math.floor(Math.random() * filteredRarities.length)];
+            }
 
             panel.querySelector("h3").style.color = this.colors_enum[+lootedItem[1].rarity];
             panel.querySelector("h3").innerHTML = lootedItem[1].name;
